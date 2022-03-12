@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch a sketch Project</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    
-</head>
+    <script src="script.js" defer></script> 
+ </head>
 <body>
-  <div class="container" onmouseover="onpoint()" onmouseout="Mouseover()"></div>
+<div class="main">
+  <div class="content">
+  <div class="container"></div>
+  <div class="buttons">
+    <button onclick="changeColor('black')">Black</button>
+    <button onclick="changeColor('white')">Erasor</button>
+    <button  onclick="changeColor('random')">Random</button>
+    <button>Reset</button>
+  </div>
+  <div>
+    <input type="text" placeholder="Gridsize" value="16" onchange="gridChange(this.value)"/>
+    <button>Set</button>
+  </div>
+</div>
+</div>
 </body>
 </html>

@@ -1,19 +1,13 @@
-* {
-    box-sizing: border-box;
-}
+
 .container {
-   border: none;
+   border: 1px solid red;
+   width: 600px;
+   height: 600px;
+   display: grid;
 
 }
 
-div {
-    display: grid;
-    grid-template-columns: repeat(16, 25px);
-    grid-template-rows: repeat(16, 25px);
-    border: 1px solid #d63d26;
-    margin: 0;
-    justify-content: center;
+
+
     
-    
-}
 
