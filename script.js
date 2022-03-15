@@ -1,5 +1,3 @@
-let color = "black";
-let click = true
 
 function gridMaker (size) {
    let container = document.querySelector('.container');
@@ -13,7 +11,8 @@ function gridMaker (size) {
       
      let square = document.createElement('div');
      square.className= 'squaregrid';
-     square.addEventListener("mouseover", changeCouleur);
+     square.addEventListener('mouseover', changeColor)
+     square.addEventListener('mouseover', Randomrgb)
      square.style.backgroundColor = "white";
      
      
@@ -39,33 +38,36 @@ function gridChange(input) {
 
 
 
-function changeCouleur(choice) {
-  if (click) {
-   if (choice === "random") {
-   this.style.backgroundColor = `hsl({$(Math.random() * 360}, 100%, 50%)`;
-  } else {
-   this.style.backgroundColor = color;
-  } }
-}
+
 
 
 
 function reset() {
-   let squares = document.querySelectorAll('div');
+   
+   let squares = document.querySelectorAll('.squaregrid');
    squares.forEach((div) => div.remove());
+   gridMaker(16);
 }
 
 
+ function Randomrgb () {
+    let btnrandom = document.querySelector('#btnrandom')
+    btnrandom.addEventListener('click', (e) => {
+      let a = Math.floor(Math.random() * 256)
+      let b = Math.floor(Math.random() * 256)
+      let c = Math.floor(Math.random() * 256)
+      return this.style.backgroundColor=`rgb(${a},${b},${c})`
+   })
+  
+ }
 
-function ChangeColor(choice){
-   color = choice;
-}
 
 
 
-
-
-
-
-
+  function changeColor () {
+    
+        this.style.backgroundColor = "black"
+   
+   }
+  
 
